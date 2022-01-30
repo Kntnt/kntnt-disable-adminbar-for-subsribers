@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || die;
 add_action( 'wp', function () {
 
 	$user = wp_get_current_user();
-	if ( count( $user->roles ) == 1 && 'subscriber' == $user->roles ) {
+	if ( count( $user->roles ) == 1 && 'subscriber' == $user->roles[0] ) {
 		add_filter( 'show_admin_bar', '__return_false' );
 	}
 
