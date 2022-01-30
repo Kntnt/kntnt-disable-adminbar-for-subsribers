@@ -18,7 +18,7 @@ add_action( 'wp', function () {
 
 	$user = wp_get_current_user();
 	if ( count( $user->roles ) == 1 && 'subscriber' == $user->roles ) {
-	//	add_filter( 'show_admin_bar', '__return_false' );
+		add_filter( 'show_admin_bar', '__return_false' );
 	}
 
 } );
